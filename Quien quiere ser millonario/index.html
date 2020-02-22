@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/animate.css">
 	<title>Single App ejemplo</title>
 	<style type="text/css">
 		section{
@@ -22,7 +23,7 @@
 			margin: auto;
 		}
 		.home{
-			background: DeepSkyBlue;
+			background: whitesmoke;
 		}
 		#h1-home{
 			position: relative;
@@ -31,29 +32,37 @@
 		}
 		#imagen-home{
 			position: relative;
-			top: 250px;
-			width: 800px;
-			height: 700px;
-			background-color: blue;
+			top: 500px;
+			width: 1080px;
+			height: 69.49%;
+			background-color: rgb(110, 1, 212);
 			margin: auto;
+			border-radius: 0% 0% 0% 0%;
+		}
+		.botones-home{
+			color: black;
+			padding: 10px;
+			background-color: white;
+			border-radius:  5% 5%;
+			font-size: 50px;
+			font-weight: bold;
+			letter-spacing: 3px;
+			font-style: oblique;
 		}
 		#instrucciones-home{
 			position: relative;
 			top: 400px;
-			font-size: 50px;
 		}
 		#jugar-home{
 			position: relative;
 			top: 550px;
-			font-size: 50px;
 		}
 		#creditos-home{
 			position: relative;
 			top: 700px;
-			font-size: 50px;
 		}
 		.juego{
-			background: orange;
+			background: skyblue;
 		}
 		.ayuda-juego{
 			margin-right: 50px;
@@ -66,14 +75,14 @@
 		#imagen-juego{
 			position: relative;
 			top: 300px;
-			width: 800px;
-			height: 700px;
-			background-color: blue;
+			width: 70%;
+			height: 60%;
+			background-color: white;
 			margin: auto;
 		}
 		#h1-juego{
 			position: relative;
-			top: 500px;
+			top: 300px;
 			font-size: 50px;
 			margin: auto;
 		}
@@ -83,6 +92,23 @@
 			font-size: 50px;
 			padding: 30px;
 			margin: auto;
+		}
+		#contadorPremio{
+			/*
+			position: relative;
+			top: 30px;
+			left: 50px;
+			*/
+			font-size: 50px;
+			width: 100px;
+			height: 50px;
+			background-color: snow;
+		}
+		#premio{
+			/*
+			position: relative;
+			top: 10px;
+			*/
 		}
 		.instrucciones{
 			background: skyblue;
@@ -164,6 +190,9 @@
 		.oculto{
 			display: none;
 		}
+		a{
+			text-decoration: none;
+		}
 	</style>
 	<script>
 		var secciones = [];
@@ -195,15 +224,15 @@
 				secciones[i].classList.add("oculto");
 			}
 	
-			//secciones[id_seccion].classList.add("animated");
-			//secciones[id_seccion].classList.add("headShake");
+			secciones[id_seccion].classList.add("animated");
+			secciones[id_seccion].classList.add("headShake");
 			secciones[id_seccion].classList.remove("oculto");
 		}
 		</script>
 </head>
 <body>
 	<!-- Splash -->
-	<section id="seccion-splash" class="splash">
+	<section id="seccion-splash" class="splash animated zoomIn">
 		<br>
 		<h1>Splash del juego</h1>
 		<div id="imagen-splash"></div>
@@ -213,13 +242,19 @@
 	<section id="seccion-home" class="home oculto">
 		<br>
 		<h1 id="h1-home">¿Quien quiere ser millonario?</h1>
-		<div id="imagen-home"></div>
+		<div id="imagen-home">
+			<a id="instrucciones-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(5)">COMO JUGAR</a><br><br>
+			<a id="jugar-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</a><br><br>
+			<a id="creditos-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(4)">CREDITOS</a><br>
+		</div>
 		<!--<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt=""> -->
 		<br>
 		<br>
+		<!-- 
 		<a id="instrucciones-home" href="javascript:void()" onclick="cambiarSeccion(5)">Como jugar</a><br><br>
 		<a id="jugar-home" href="javascript:void()" onclick="cambiarSeccion(3)">Jugar</a><br><br>
 		<a id="creditos-home" href="javascript:void()" onclick="cambiarSeccion(4)">Créditos</a><br>
+		-->
 	</section>
 	<!-- Juego -->
 	<section id="seccion-juego" class="juego oculto">
@@ -227,17 +262,19 @@
 		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
 		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
 		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
+		<div id="contadorPremio" ><span id="premio">0</span>%</div>
 		<br>
 		<br>
-		<div id="imagen-juego"></div>
+		<h1 id="h1-juego">Pregunta</h1>
+		<div id="imagen-juego">
+			<a class="respuesta-juego" href="javascript:void();">Respuesta A</a>&nbsp;&nbsp;
+			<a class="respuesta-juego" href="javascript:void();">Respuesta B</a><br><br>
+			<a class="respuesta-juego" href="javascript:void();">Respuesta C</a>&nbsp;&nbsp;
+			<a class="respuesta-juego" href="javascript:void();">Respuesta D</a><br><br>
+		</div>
 		<!-- <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt=""> -->
-		<h1 id="h1-juego">Preguntas</h1>
 		<br>
 		<br>
-		<a class="respuesta-juego" href="#">Respuesta A</a>&nbsp;&nbsp;
-		<a class="respuesta-juego" href="#">Respuesta B</a><br><br>
-		<a class="respuesta-juego" href="#">Respuesta C</a>&nbsp;&nbsp;
-		<a class="respuesta-juego" href="#">Respuesta D</a><br><br>
 	</section>
 	<!-- Créditos / Autores -->
 	<section id="seccion-creditos" class="creditos oculto">
