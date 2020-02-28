@@ -1,304 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/animate.css">
-	<title>Single App ejemplo</title>
-	<style type="text/css">
-		section{
-			width:1080px;
-			height:2160px;
-			text-align: center;
-		}
-		.splash{
-			background: blue;
-		}
-		#imagen-splash{
-			position: relative;
-			top: 550px;
-			width: 900px;
-			height: 800px;
-			background-color: skyblue;
-			margin: auto;
-		}
-		.home{
-			background: whitesmoke;
-		}
-		#h1-home{
-			position: relative;
-			top: 100px;
-			font-size: 50px;
-		}
-		#imagen-home{
-			position: relative;
-			top: 500px;
-			width: 1080px;
-			height: 69.49%;
-			background-color: rgb(110, 1, 212);
-			margin: auto;
-			border-radius: 0% 0% 0% 0%;
-		}
-		.botones-home{
-			color: black;
-			padding: 10px;
-			background-color: white;
-			border-radius:  5% 5%;
-			font-size: 50px;
-			font-weight: bold;
-			letter-spacing: 3px;
-			font-style: oblique;
-		}
-		#instrucciones-home{
-			position: relative;
-			top: 400px;
-		}
-		#jugar-home{
-			position: relative;
-			top: 550px;
-		}
-		#creditos-home{
-			position: relative;
-			top: 700px;
-		}
-		.juego{
-			background: skyblue;
-		}
-		.ayuda-juego{
-			margin-right: 50px;
-			background-color: Navy;
-			color:white;
-			padding: 50px;
-			text-decoration: none;
-			float: right;
-		}
-		#imagen-juego{
-			position: relative;
-			top: 300px;
-			width: 70%;
-			height: 60%;
-			background-color: white;
-			margin: auto;
-		}
-		#h1-juego{
-			position: relative;
-			top: 300px;
-			font-size: 50px;
-			margin: auto;
-		}
-		.respuesta-juego{
-			position: relative;
-			top: 700px;
-			font-size: 50px;
-			padding: 30px;
-			margin: auto;
-		}
-		#contadorPremio{
-			/*
-			position: relative;
-			top: 30px;
-			left: 50px;
-			*/
-			font-size: 50px;
-			width: 100px;
-			height: 50px;
-			background-color: snow;
-		}
-		#premio{
-			/*
-			position: relative;
-			top: 10px;
-			*/
-		}
-		.instrucciones{
-			background: skyblue;
-		}
-		#imagen-instrucciones{
-			position: relative;
-			top: 300px;
-			width: 800px;
-			height: 700px;
-			background-color: blue;
-			margin: auto;
-		}
-		#h1-instrucciones{
-			position: relative;
-			top: 400px;
-			padding-bottom: 450px;
-			font-size: 50px;
-		}
-		#p-instrucciones{
-			font-size: 30px;
-		}
-		.creditos{
-			background: DeepSkyBlue;
-		}
-		#h1-creditos{
-			position: relative;
-			top: 450px;
-			padding-bottom: 450px;
-			font-size: 50px;
-		}
-		#imagen-creditos{
-			position: relative;
-			top: 300px;
-			width: 800px;
-			height: 700px;
-			background-color: blue;
-			margin: auto;
-		}
-		#Diseñadora-creditos{
-			font-size: 50px;
-			position: relative;
-			top: 100px;
-		}
-		#ImgDiseñadora-creditos{
-			position: relative;
-			top: 110px;
-		}
-		#Ingeniero-creditos{
-			font-size: 50px;
-			position: relative;
-			top: 250px;
-			left: -20px;
-		}
-		#ImgIngeniero-creditos{
-			position: relative;
-			top: 270px;
-			left: -20px;
-		}
-		.botonVolver{
-			background-color: Navy;
-			color:white;
-			padding: 50px;
-			text-decoration: none;
-			float: right;
-		}
-		.jugar-instrucciones{
-			position: relative;
-			background-color: Navy;
-			color:white;
-			padding: 40px;
-			text-decoration: none;
-			top: 300px;
-			font-size: 50px;
-		}
-		.volver{
-			margin-left: -300px;
-			line-height: 50px;
-		}
-		.oculto{
-			display: none;
-		}
-		a{
-			text-decoration: none;
-		}
-	</style>
-	<script>
-		var secciones = [];
-		var tiempo_splash = 2000;
-	
-		window.onload = function(){
-			inicializarReferencias();
-			setTimeout(cambiarSplash,tiempo_splash);
-		}
-	
-		function inicializarReferencias(){
-			secciones[1] = document.getElementById("seccion-splash");
-			secciones[2] = document.getElementById("seccion-home");
-			secciones[3] = document.getElementById("seccion-juego");
-			secciones[4] = document.getElementById("seccion-creditos");
-			secciones[5] = document.getElementById("seccion-instrucciones");
-		}
-	
-		function cambiarSplash(){
-			secciones[1].className = "splash oculto";
-			secciones[2].className = "home";
-		}
-	
-		//https://developer.mozilla.org/es/docs/Web/API/Element/classList
-		//https://www.youtube.com/watch?v=2z0wMNHPbzk
-		function cambiarSeccion(id_seccion){
-	
-			for (var i in secciones) {
-				secciones[i].classList.add("oculto");
-			}
-	
-			secciones[id_seccion].classList.add("animated");
-			secciones[id_seccion].classList.add("headShake");
-			secciones[id_seccion].classList.remove("oculto");
-		}
-		</script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+    <title>Single App</title>
+    <script>
+        var secciones = [];
+        var tiempo_splash = 2000;
+        window.onload = function() {
+            inicializarReferencias();
+            setTimeout(cambiarSplash, tiempo_splash);
+        }
+
+        function inicializarReferencias() {
+            secciones[1] = document.getElementById("seccion-splash");
+            secciones[2] = document.getElementById("seccion-home");
+            secciones[3] = document.getElementById("seccion-juego");
+            secciones[4] = document.getElementById("seccion-creditos");
+            secciones[5] = document.getElementById("seccion-instrucciones");
+        }
+
+        function cambiarSplash() {
+            secciones[1].className = "splash oculto";
+            secciones[2].className = "home";
+        }
+        //https://developer.mozilla.org/es/docs/Web/API/Element/classList
+        //https://www.youtube.com/watch?v=2z0wMNHPbzk
+        function cambiarSeccion(id_seccion) {
+            for (var i in secciones) {
+                secciones[i].classList.add("oculto");
+            }
+            secciones[id_seccion].classList.add("animated");
+            secciones[id_seccion].classList.add("headShake");
+            secciones[id_seccion].classList.remove("oculto");
+        }
+    </script>
 </head>
+
 <body>
-	<!-- Splash -->
-	<section id="seccion-splash" class="splash animated zoomIn">
-		<br>
-		<h1>Splash del juego</h1>
-		<div id="imagen-splash"></div>
-		<!-- <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt=""> -->
-	</section>
-	<!-- Home -->
-	<section id="seccion-home" class="home oculto">
-		<br>
-		<h1 id="h1-home">¿Quien quiere ser millonario?</h1>
-		<div id="imagen-home">
-			<a id="instrucciones-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(5)">COMO JUGAR</a><br><br>
-			<a id="jugar-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</a><br><br>
-			<a id="creditos-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(4)">CREDITOS</a><br>
-		</div>
-		<!--<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt=""> -->
-		<br>
-		<br>
-		<!-- 
+    <!-- Splash -->
+    <section id="seccion-splash" class="splash animated zoomIn">
+        <br>
+        <h1>Splash del juego</h1>
+        <div id="imagen-splash"></div>
+        <!-- <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt=""> -->
+    </section>
+    <!-- Home -->
+    <section id="seccion-home" class="home oculto">
+        <br>
+        <h1 id="h1-home">¿Quien quiere ser millonario?</h1>
+        <div id="imagen-home">
+            <a id="instrucciones-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(5)">COMO
+				JUGAR</a><br><br>
+            <a id="jugar-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(3)">JUGAR</a><br><br>
+            <a id="creditos-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(4)">CREDITOS</a><br>
+        </div>
+        <!--<img src="http://icons.iconarchive.com/icons/sonya/swarm/128/ivoted-2014-icon.png" alt=""> -->
+        <br>
+        <br>
+        <!--
 		<a id="instrucciones-home" href="javascript:void()" onclick="cambiarSeccion(5)">Como jugar</a><br><br>
 		<a id="jugar-home" href="javascript:void()" onclick="cambiarSeccion(3)">Jugar</a><br><br>
 		<a id="creditos-home" href="javascript:void()" onclick="cambiarSeccion(4)">Créditos</a><br>
 		-->
-	</section>
-	<!-- Juego -->
-	<section id="seccion-juego" class="juego oculto">
-		<a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
-		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
-		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
-		<a href="javascript:void();" class="ayuda-juego">&lt;</a>
-		<div id="contadorPremio" ><span id="premio">0</span>%</div>
-		<br>
-		<br>
-		<h1 id="h1-juego">Pregunta</h1>
-		<div id="imagen-juego">
+    </section>
+    <!-- Juego -->
+    <section id="seccion-juego" class="juego oculto">
+        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
+        <a href="javascript:void();" class="ayuda-juego">&lt;</a>
+        <a href="javascript:void();" class="ayuda-juego">&lt;</a>
+        <a href="javascript:void();" class="ayuda-juego">&lt;</a>
+        <div id="contadorPremio"><span id="premio">0</span>%</div>
+        <br>
+        <br>
+        <h1 id="h1-juego">Pregunta</h1>
+        <div id="imagen-juego">
+            <!--
 			<a class="respuesta-juego" href="javascript:void();">Respuesta A</a>&nbsp;&nbsp;
 			<a class="respuesta-juego" href="javascript:void();">Respuesta B</a><br><br>
 			<a class="respuesta-juego" href="javascript:void();">Respuesta C</a>&nbsp;&nbsp;
 			<a class="respuesta-juego" href="javascript:void();">Respuesta D</a><br><br>
-		</div>
-		<!-- <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt=""> -->
-		<br>
-		<br>
-	</section>
-	<!-- Créditos / Autores -->
-	<section id="seccion-creditos" class="creditos oculto">
-		<a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
-		<br>
-		<br>
-		<div id="imagen-creditos"></div>
-		<h1 id="h1-creditos">Créditos - Estudiantes</h1>
-		<br>
-		<img id="ImgDiseñadora-creditos" src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png" alt="">&nbsp;&nbsp;
-		<span id="Diseñadora-creditos">Nombre Estudiante / Diseñad@r</span> <br>
-		<img id="ImgIngeniero-creditos" src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png" alt="">&nbsp;&nbsp;
-		<span id="Ingeniero-creditos">Nombre Estudiante / Ingeniero</span> <br>
-	</section>
-	<!-- Instrucciones -->
-	<section id="seccion-instrucciones" class="instrucciones oculto">
-		<a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
-		<div id="imagen-instrucciones"></div>
-		<h1 id="h1-instrucciones">Como jugar</h1>
-		<p id="p-instrucciones">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab minima omnis sed! <br>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem placeat quod dolorum! Explicabo eius dolorum atque, deserunt quidem est iste unde, ducimus veniam reiciendis rerum, placeat aliquam quod quo ea.			
-		</p>
-		<a href="javascript:void()" onclick="cambiarSeccion(3)" class="jugar-instrucciones">Jugar</a>
-	</section>
+			-->
+            <input type="button" class="respuesta-juego" value="">&nbsp;&nbsp;
+            <input type="button" class="respuesta-juego" value=""><br><br>
+            <input type="button" class="respuesta-juego" value="">&nbsp;&nbsp;
+            <input type="button" class="respuesta-juego" value=""><br><br>
+        </div>
+        <!-- <img src="http://icons.iconarchive.com/icons/sonya/swarm/128/Mona-Lisa-icon.png" alt=""> -->
+        <br>
+        <br>
+        <script>
+            let datos = [1, 2, 3, 4];
+            let botones = Array.from(document.querySelectorAll(".respuesta-juego"));
+
+            function shuffle(array) {
+                return array.sort(() => Math.random() - 0.5);
+            }
+
+            function randomizar() {
+                let numeros = shuffle(datos);
+                let cont = 0,
+                    num;
+                for (i in botones) {
+                    num = numeros[cont++];
+                    botones[i].value = (num) ? num : " ";
+                }
+            }
+
+            function respuestas() {
+                for (i in botones) {
+                    if (botones[i].value == "1") {
+                        botones[i].value = "Respuesta A";
+                    } else if (botones[i].value == "2") {
+                        botones[i].value = "Respuesta B";
+                    } else if (botones[i].value == "3") {
+                        botones[i].value = "Respuesta C";
+                    } else if (botones[i].value == "4") {
+                        botones[i].value = "Respuesta D";
+                    }
+                }
+            }
+
+            randomizar();
+            respuestas();
+        </script>
+    </section>
+    <!-- Créditos / Autores -->
+    <section id="seccion-creditos" class="creditos oculto">
+        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
+        <br>
+        <br>
+        <div id="imagen-creditos"></div>
+        <h1 id="h1-creditos">Créditos - Estudiantes</h1>
+        <br>
+        <img id="ImgDiseñadora-creditos" src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Black-Widow-icon.png" alt="">&nbsp;&nbsp;
+        <span id="Diseñadora-creditos">Nombre Estudiante / Diseñad@r</span> <br>
+        <img id="ImgIngeniero-creditos" src="http://icons.iconarchive.com/icons/hopstarter/superhero-avatar/64/Avengers-Iron-Man-icon.png" alt="">&nbsp;&nbsp;
+        <span id="Ingeniero-creditos">Nombre Estudiante / Ingeniero</span> <br>
+    </section>
+    <!-- Instrucciones -->
+    <section id="seccion-instrucciones" class="instrucciones oculto">
+        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
+        <div id="imagen-instrucciones"></div>
+        <h1 id="h1-instrucciones">Como jugar</h1>
+        <p id="p-instrucciones">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab minima omnis sed! <br> Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Rem placeat quod dolorum! Explicabo eius dolorum atque, deserunt quidem est iste unde, ducimus veniam reiciendis rerum, placeat aliquam quod quo ea.
+        </p>
+        <a href="javascript:void()" onclick="cambiarSeccion(3)" class="jugar-instrucciones">Jugar</a>
+    </section>
 </body>
+
 </html>

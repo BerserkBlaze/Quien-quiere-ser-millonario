@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+}
+
+section {
+    width: 1080px;
+    height: 2160px;
+    text-align: center;
+}
+
+.splash {
+    background: blue;
+}
+
+#imagen-splash {
+    position: relative;
+    top: 550px;
+    width: 900px;
+    height: 800px;
+    background-color: skyblue;
+    margin: auto;
+}
+
+.home {
+    background: whitesmoke;
+}
+
+#h1-home {
+    position: relative;
+    top: 100px;
+    font-size: 50px;
+}
+
+#imagen-home {
+    position: relative;
+    top: 500px;
+    width: 1080px;
+    height: 69.49%;
+    background-color: rgb(110, 1, 212);
+    margin: auto;
+    border-radius: 0% 0% 0% 0%;
+}
+
+.botones-home {
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5% 5%;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-style: oblique;
+}
+
+#instrucciones-home {
+    position: relative;
+    top: 400px;
+}
+
+#jugar-home {
+    position: relative;
+    top: 550px;
+}
+
+#creditos-home {
+    position: relative;
+    top: 700px;
+}
+
+.juego {
+    background: skyblue;
+}
+
+.ayuda-juego {
+    margin-right: 50px;
+    background-color: Navy;
+    color: white;
+    padding: 50px;
+    text-decoration: none;
+    float: right;
+}
+
+#imagen-juego {
+    position: relative;
+    top: 300px;
+    width: 70%;
+    height: 60%;
+    background-color: white;
+    margin: auto;
+}
+
+#h1-juego {
+    position: relative;
+    top: 300px;
+    font-size: 50px;
+    margin: auto;
+}
+
+.respuesta-juego {
+    position: relative;
+    top: 700px;
+    font-size: 20px;
+    padding: 30px;
+    margin: auto;
+    width: 300px;
+    height: 100px;
+    background: pink;
+    color: purple;
+}
+
+#contadorPremio {
+    /*
+    position: relative;
+    top: 30px;
+    left: 50px;
+    */
+    font-size: 50px;
+    width: 100px;
+    height: 50px;
+    background-color: snow;
+}
+
+
+/*
+#premio{
+    
+    position: relative;
+    top: 10px;
+    
+}
+*/
+
+.instrucciones {
+    background: skyblue;
+}
+
+#imagen-instrucciones {
+    position: relative;
+    top: 300px;
+    width: 800px;
+    height: 700px;
+    background-color: blue;
+    margin: auto;
+}
+
+#h1-instrucciones {
+    position: relative;
+    top: 400px;
+    padding-bottom: 450px;
+    font-size: 50px;
+}
+
+#p-instrucciones {
+    font-size: 30px;
+}
+
+.creditos {
+    background: DeepSkyBlue;
+}
+
+#h1-creditos {
+    position: relative;
+    top: 450px;
+    padding-bottom: 450px;
+    font-size: 50px;
+}
+
+#imagen-creditos {
+    position: relative;
+    top: 300px;
+    width: 800px;
+    height: 700px;
+    background-color: blue;
+    margin: auto;
+}
+
+#Diseñadora-creditos {
+    font-size: 50px;
+    position: relative;
+    top: 100px;
+}
+
+#ImgDiseñadora-creditos {
+    position: relative;
+    top: 110px;
+}
+
+#Ingeniero-creditos {
+    font-size: 50px;
+    position: relative;
+    top: 250px;
+    left: -20px;
+}
+
+#ImgIngeniero-creditos {
+    position: relative;
+    top: 270px;
+    left: -20px;
+}
+
+.botonVolver {
+    background-color: Navy;
+    color: white;
+    padding: 50px;
+    text-decoration: none;
+    float: right;
+}
+
+.jugar-instrucciones {
+    position: relative;
+    background-color: Navy;
+    color: white;
+    padding: 40px;
+    text-decoration: none;
+    top: 300px;
+    font-size: 50px;
+}
+
+.volver {
+    margin-left: -300px;
+    line-height: 50px;
+}
+
+.oculto {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
