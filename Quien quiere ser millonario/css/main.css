@@ -35,7 +35,7 @@ section {
     position: relative;
     top: 500px;
     width: 1080px;
-    height: 69.49%;
+    height: 73%;
     background-color: rgb(110, 1, 212);
     margin: auto;
     border-radius: 0% 0% 0% 0%;
@@ -68,16 +68,64 @@ section {
 }
 
 .juego {
-    background: skyblue;
+    background: cornflowerblue;
+}
+
+#fondo-juego {
+    position: relative;
+    top: 1400px;
+    border-left: 300px solid darkslateblue;
+    border-right: 700px solid transparent;
+    border-bottom: 500px solid darkslateblue;
+}
+
+#fondo-juego2 {
+    position: relative;
+    top: 1400px;
+    width: 100%;
+    height: 210px;
+    background-color: darkslateblue;
+}
+
+#h1-juego {
+    position: relative;
+    top: -400px;
+    font-size: 50px;
+}
+
+#panelPreguntas-juego {
+    position: relative;
+    top: -350px;
+    width: 100%;
+    height: 1200px;
+    background-color: white;
+}
+
+#pregunta-juego {
+    position: relative;
+    top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.respuesta-juego {
+    position: relative;
+    top: 300px;
+    font-size: 30px;
+    padding: 30px;
+    margin: 30px;
+    width: 400px;
+    height: 100px;
+    background: whitesmoke;
+    color: black;
 }
 
 .ayuda-juego {
-    margin-right: 50px;
     background-color: Navy;
     color: white;
     padding: 50px;
     text-decoration: none;
-    float: right;
+    margin: 30px;
 }
 
 #imagen-juego {
@@ -87,25 +135,6 @@ section {
     height: 60%;
     background-color: white;
     margin: auto;
-}
-
-#h1-juego {
-    position: relative;
-    top: 300px;
-    font-size: 50px;
-    margin: auto;
-}
-
-.respuesta-juego {
-    position: relative;
-    top: 700px;
-    font-size: 20px;
-    padding: 30px;
-    margin: auto;
-    width: 300px;
-    height: 100px;
-    background: pink;
-    color: purple;
 }
 
 #contadorPremio {
@@ -120,42 +149,84 @@ section {
     background-color: snow;
 }
 
-
-/*
-#premio{
-    
-    position: relative;
-    top: 10px;
-    
+#seccion-nivel-juego {
+    background-color: red;
 }
-*/
+
+.ventanaAyuda-juego {
+    background: yellow;
+    width: 1000px;
+    height: 800px;
+    color: black;
+    font-family: fantasy;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+    min-height: 300px;
+    border-radius: 25%;
+    position: absolute;
+    /*     left: 300px; */
+    top: 400px;
+}
+
+#cerrar {
+    position: relative;
+    float: inline-end;
+}
 
 .instrucciones {
-    background: skyblue;
+    background: cornflowerblue;
 }
 
-#imagen-instrucciones {
+#fondo-instrucciones {
     position: relative;
-    top: 300px;
-    width: 800px;
-    height: 700px;
-    background-color: blue;
+    top: 745px;
     margin: auto;
+    border-left: 300px solid darkslateblue;
+    border-right: 700px solid transparent;
+    border-bottom: 500px solid darkslateblue;
+}
+
+#fondo-instrucciones2 {
+    position: relative;
+    top: 745px;
+    width: 1080px;
+    height: 852px;
+    background-color: darkslateblue;
+    margin: auto;
+}
+
+#panel-instrucciones {
+    position: relative;
+    top: -900px;
+    width: 1000px;
+    height: 1300px;
+    background-color: white;
 }
 
 #h1-instrucciones {
     position: relative;
-    top: 400px;
-    padding-bottom: 450px;
+    top: 200px;
     font-size: 50px;
 }
 
 #p-instrucciones {
-    font-size: 30px;
+    position: relative;
+    top: 100px;
+    font-size: 50px;
+}
+
+#jugar-instrucciones {
+    position: relative;
+    top: -700px;
+    left: 400px;
+    font-size: 50px;
+    padding: 10px;
+    background-color: white;
 }
 
 .creditos {
-    background: DeepSkyBlue;
+    background: whitesmoke;
 }
 
 #h1-creditos {
@@ -167,35 +238,49 @@ section {
 
 #imagen-creditos {
     position: relative;
-    top: 300px;
-    width: 800px;
-    height: 700px;
-    background-color: blue;
+    top: -202px;
+    left: -141px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
     margin: auto;
+    border-radius: 100%;
+}
+
+#imagen-creditos2 {
+    position: relative;
+    top: 59px;
+    left: -141px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#fondo-creditos {
+    position: relative;
+    top: 745px;
+    left: -400px;
+    height: 600px;
+    width: 1400px;
+    border-radius: 50% / 0 0 100% 100%;
+    background-color: rgb(110, 1, 212);
+    transform: rotate(-90deg);
 }
 
 #Diseñadora-creditos {
-    font-size: 50px;
+    font-size: 70px;
     position: relative;
-    top: 100px;
-}
-
-#ImgDiseñadora-creditos {
-    position: relative;
-    top: 110px;
+    top: -200px;
+    left: 300px;
 }
 
 #Ingeniero-creditos {
-    font-size: 50px;
+    font-size: 70px;
     position: relative;
-    top: 250px;
-    left: -20px;
-}
-
-#ImgIngeniero-creditos {
-    position: relative;
-    top: 270px;
-    left: -20px;
+    top: -1140px;
+    left: 300px;
 }
 
 .botonVolver {
@@ -204,16 +289,6 @@ section {
     padding: 50px;
     text-decoration: none;
     float: right;
-}
-
-.jugar-instrucciones {
-    position: relative;
-    background-color: Navy;
-    color: white;
-    padding: 40px;
-    text-decoration: none;
-    top: 300px;
-    font-size: 50px;
 }
 
 .volver {
