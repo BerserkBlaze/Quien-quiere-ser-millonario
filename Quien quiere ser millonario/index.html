@@ -13,78 +13,92 @@
 <body>
     <!-- Splash -->
     <section id="seccion-splash" class="splash animated zoomIn">
-        <br>
-        <h1>Splash del juego</h1>
-        <div id="imagen-splash"></div>
+        <div id="fondo1-splash"></div>
+        <div id="fondo2-splash"></div>
     </section>
     <!-- Home -->
     <section id="seccion-home" class="home oculto">
-        <br>
-        <h1 id="h1-home">¿Quien quiere ser millonario?</h1>
+        <div id="fondo1-home">
+            <h1 id="h1-home">¿Quien quiere ser millonario?</h1>
+        </div>
+        <div id="fondo2-home"></div>
+        <div id="fondo3-home"></div>
+        <div id="fondo4-home"></div>
+
         <div id="imagen-home">
             <a id="instrucciones-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(5);">COMO
 				JUGAR</a><br><br>
             <a id="jugar-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(3); mostrarNivel();">JUGAR</a><br><br>
             <a id="creditos-home" class="botones-home" href="javascript:void();" onclick="cambiarSeccion(4);">CREDITOS</a><br>
         </div>
-        <br>
-        <br>
     </section>
     <!-- Juego -->
     <section id="seccion-juego" class="juego oculto">
-        <a href="javascript:void();" onclick="cambiarSeccion(2); cerrarAyudas();" class="botonVolver">&lt;</a>
+        <a href="javascript:void();" onclick="cambiarSeccion(2); cerrarAyudas();" class="botonVolver"><img class="imagen-volver" src="img/Grupo 32.png" alt="volver"></a>
         <div id="contadorPremio">0%</div>
+        <div id="panelfondo-juego"></div>
         <div id="fondo-juego"></div>
         <div id="fondo-juego2">
-            <a id="ayuda-solucion" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-solucion')">&lt;</a>
-            <a id="ayuda-publico" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-publico')">&lt;</a>
-            <a id="ayuda-50" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-50')">&lt;</a>
+            <a id="ayuda-solucion" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-solucion')"><img class="imagen-ayuda-juego" src="img/Grupo 167.png" alt="solucion"></a>
+            <a id="ayuda-publico" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-publico')"><img class="imagen-ayuda-juego" src="img/Grupo 168.png" alt="publico"></a>
+            <a id="ayuda-50" href="javascript:void();" class="ayuda-juego" onclick="verificarAyudas('ayuda-50')"><img class="imagen-ayuda-juego" src="img/Grupo 166.png" alt="wifi"></a>
         </div>
         <h1 id="h1-juego">PREGUNTA</h1>
         <div id="panelPreguntas-juego">
-            <p id="pregunta-juego">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt dolor deleniti quod, in, perferendis animi, illum dicta quasi pariatur distinctio accusantium beatae dolore consequuntur quisquam ex ipsum molestias soluta optio.</p>
-            <input id="respuestaIzquierdaArriba" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaIzquierdaArriba'); mostrarNivel();">
-            <input id="respuestaDerechaArriba" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaDerechaArriba'); mostrarNivel();">
-            <input id="respuestaIzquierdaAbajo" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaIzquierdaAbajo'); mostrarNivel();">
-            <input id="respuestaDerechaAbajo" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaDerechaAbajo'); mostrarNivel();">
+            <div id="contenedor-pregunta-juego">
+                <p id="pregunta-juego">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt dolor deleniti quod, in, perferendis animi, illum dicta quasi pariatur distinctio accusantium beatae dolore consequuntur quisquam ex ipsum molestias soluta optio.</p>
+            </div>
+            <div>
+                <input id="respuestaIzquierdaArriba" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaIzquierdaArriba'); mostrarNivel();">
+                <input id="respuestaDerechaArriba" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaDerechaArriba'); mostrarNivel();">
+                <input id="respuestaIzquierdaAbajo" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaIzquierdaAbajo'); mostrarNivel();">
+                <input id="respuestaDerechaAbajo" type="button" class="respuesta-juego" value="" onclick="verificarRespuesta('respuestaDerechaAbajo'); mostrarNivel();">
+            </div>
         </div>
     </section>
     <!-- Créditos / Autores -->
     <section id="seccion-creditos" class="creditos oculto">
-        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
-        <div id="fondo-creditos"></div>
-        <div id="imagen-creditos"></div>
-        <div id="imagen-creditos2"></div>
-        <span id="Diseñadora-creditos">Diseñadora</span> <br>
-        <span id="Ingeniero-creditos">Ingeniero</span> <br>
+        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver"><img class="imagen-volver" src="img/Grupo 32.png" alt="volver"></a>
+        <div id="fondo-creditos">
+            <div id="imagen-creditos" class="circulos-creditos"></div>
+            <div id="imagen-creditos2" class="circulos-creditos"></div>
+        </div>
+        <span id="Diseñadora-creditos">Diseñadora</span>
+        <span id="Ingeniero-creditos">Ingeniero</span>
+
     </section>
     <!-- Instrucciones -->
     <section id="seccion-instrucciones" class="instrucciones oculto">
-        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver">&lt;</a>
+        <a href="javascript:void();" onclick="cambiarSeccion(2)" class="botonVolver"><img class="imagen-volver" src="img/Grupo 32.png" alt="volver"></a>
         <h1 id="h1-instrucciones">COMO JUGAR</h1>
         <div id="fondo-instrucciones"></div>
         <div id="fondo-instrucciones2"></div>
+        <div id="panelfondo-instrucciones"></div>
         <div id="panel-instrucciones">
             <p id="p-instrucciones">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo ducimus voluptates suscipit consequatur eligendi eos, hic aperiam sit! Recusandae explicabo provident sapiente beatae nam soluta ab minima omnis sed! <br> Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem placeat quod dolorum! Explicabo eius dolorum atque, deserunt quidem est iste unde, ducimus veniam reiciendis rerum, placeat aliquam quod quo ea.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt illum, nulla unde officiis pariatur vitae earum quod, cum magni veritatis, fugit consequuntur nam? Molestias unde atque omnis debitis nulla voluptatum.
             </p>
         </div>
         <a type="button" href="javascript:void();" onclick="cambiarSeccion(3); mostrarNivel();" id="jugar-instrucciones">JUGAR</a>
     </section>
     <section id="seccion-nivel-juego" class="oculto">
-        <h1 id="nivelActual">Nivel 1</h1>
-        <div id="nivelf1">N</div>
-        <div id="nivelf2">N</div>
+        <div id="nivelf1"></div>
+        <div id="nivelf2"></div>
+        <div id="contenedor-nivelActual">
+            <h1 id="nivelActual">Nivel 1</h1>
+        </div>
     </section>
-    <!--     agregado -->
-    <div id="ventana" class="ventanaAyuda-juego oculto">Ayudas
+    <div id="ventana" class="ventanaAyuda-juego oculto">
+        <div id="fondo-ventanaAyuda">
+        </div>
         <div id="panel-ayuda"></div>
         <div id="cerrar">
             <a href="javascript:void();"><img src="img/close.png" alt="cerrar" onclick="cerrarAyudas()"></a>
         </div>
+        <div id="imagenAyuda" class="imagen-ayuda">
+            <!--             <a href="javascript:void();"></a> -->
+        </div>
     </div>
-    <!--     fin agregado -->
 </body>
 
 </html>

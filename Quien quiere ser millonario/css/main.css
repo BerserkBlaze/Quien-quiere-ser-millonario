@@ -2,130 +2,223 @@
     margin: 0;
 }
 
+html {
+    font-family: helvetica, sans-serif;
+}
+
 section {
-    width: 1080px;
-    height: 2160px;
+    width: 360px;
+    height: 720px;
     text-align: center;
 }
 
 .splash {
-    background: blue;
+    background: white;
 }
 
-#imagen-splash {
+#fondo1-splash {
+    position: absolute;
+    top: 420px;
+    left: 60px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(1, 114, 192);
+    border-radius: 100% 100% 0% 100%;
+}
+
+#fondo2-splash {
     position: relative;
-    top: 550px;
-    width: 900px;
-    height: 800px;
-    background-color: skyblue;
-    margin: auto;
+    top: 168px;
+    left: -124px;
+    height: 255px;
+    width: 504px;
+    border-radius: 50% / 0 0 100% 100%;
+    background: rgb(37, 43, 137);
+    transform: rotate(-90deg);
 }
 
 .home {
-    background: whitesmoke;
+    background: white;
+}
+
+#fondo1-home {
+    background-color: white;
+    height: 30%;
+    width: 360px;
+}
+
+#fondo2-home {
+    position: absolute;
+    top: 115px;
+    left: 345px;
+    background-color: rgb(101, 54, 184);
+    height: 100px;
+    width: 15px;
+}
+
+#fondo3-home {
+    position: absolute;
+    top: 100px;
+    left: 345px;
+    width: 15px;
+    height: 15px;
+    background: rgb(101, 54, 184);
+    border-radius: 70% 0% 0% 0%;
+}
+
+#fondo4-home {
+    position: absolute;
+    top: 192px;
+    left: 320px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-shadow: 16px 8px 0 rgb(101, 54, 184);
+    transform: rotate(10deg);
 }
 
 #h1-home {
     position: relative;
-    top: 100px;
-    font-size: 50px;
+    top: 80px;
+    text-align: center;
 }
 
 #imagen-home {
-    position: relative;
-    top: 500px;
-    width: 1080px;
-    height: 73%;
-    background-color: rgb(110, 1, 212);
+    width: 360px;
+    height: 70%;
+    background-color: rgb(101, 54, 184);
     margin: auto;
-    border-radius: 0% 0% 0% 0%;
+    border-top-left-radius: 8%;
 }
 
 .botones-home {
     color: black;
-    padding: 10px;
+    padding: 1em;
     background-color: white;
-    border-radius: 5% 5%;
-    font-size: 50px;
+    border-radius: 5%;
     font-weight: bold;
-    letter-spacing: 3px;
-    font-style: oblique;
 }
 
 #instrucciones-home {
     position: relative;
-    top: 400px;
+    top: 140px;
 }
 
 #jugar-home {
     position: relative;
-    top: 550px;
+    top: 200px;
 }
 
 #creditos-home {
     position: relative;
-    top: 700px;
+    top: 260px;
 }
 
 .juego {
-    background: cornflowerblue;
+    background: rgb(133, 172, 231);
 }
 
 #fondo-juego {
-    position: relative;
-    top: 1400px;
-    border-left: 300px solid darkslateblue;
-    border-right: 700px solid transparent;
-    border-bottom: 500px solid darkslateblue;
+    position: absolute;
+    top: 420px;
+    border-left: 200px solid rgb(94, 108, 173);
+    border-right: 160px solid transparent;
+    border-bottom: 200px solid rgb(94, 108, 173);
 }
 
 #fondo-juego2 {
-    position: relative;
-    top: 1400px;
-    width: 100%;
-    height: 210px;
-    background-color: darkslateblue;
+    position: absolute;
+    top: 620px;
+    width: 360px;
+    height: 100px;
+    background-color: rgb(94, 108, 173);
 }
 
 #h1-juego {
     position: relative;
-    top: -400px;
-    font-size: 50px;
+    top: 85px;
+    left: 20px;
 }
 
 #panelPreguntas-juego {
     position: relative;
-    top: -350px;
-    width: 100%;
-    height: 1200px;
+    top: 100px;
+    width: 360px;
+    height: 360px;
     background-color: white;
+    border-radius: 7%;
+}
+
+#panelfondo-juego {
+    position: absolute;
+    top: 69px;
+    left: 0px;
+    width: 149px;
+    height: 76px;
+    border-radius: 50%;
+    box-shadow: -14px 25px 0 white;
+    transform: rotate(-354deg);
+}
+
+#contenedor-pregunta-juego {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 320px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 #pregunta-juego {
-    position: relative;
-    top: 50px;
-    font-size: 50px;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .respuesta-juego {
-    position: relative;
-    top: 300px;
-    font-size: 30px;
-    padding: 30px;
-    margin: 30px;
-    width: 400px;
-    height: 100px;
-    background: whitesmoke;
+    margin: 2px;
+    width: 173px;
+    height: 80px;
+    background: none;
+    border: none;
     color: black;
+    text-align: center;
+    font-weight: bold;
 }
 
 .ayuda-juego {
-    background-color: Navy;
-    color: white;
-    padding: 50px;
+    /*     background-color: Navy;
+    color: white; */
+    padding: 15px;
     text-decoration: none;
-    margin: 30px;
+    margin: 20px;
+}
+
+.imagen-ayuda-juego {
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+.imagen-solucion {
+    background-image: url("../img/Grupo\ 167.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-publico {
+    background-image: url("../img/Grupo\ 168.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.imagen-50 {
+    background-image: url("../img/Grupo\ 166.png");
+    background-size: cover;
+    background-position: center;
 }
 
 #imagen-juego {
@@ -138,95 +231,184 @@ section {
 }
 
 #contadorPremio {
-    /*
-    position: relative;
+    position: absolute;
     top: 30px;
-    left: 50px;
-    */
-    font-size: 50px;
-    width: 100px;
-    height: 50px;
+    left: 30px;
+    width: 50px;
+    height: 18px;
+    border-radius: 20%;
     background-color: snow;
 }
 
 #seccion-nivel-juego {
-    background-color: red;
+    background-color: white;
+}
+
+#contenedor-nivelActual {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 360px;
+    height: 700px;
+}
+
+#nivelActual {
+    position: relative;
+    z-index: 3;
+    color: white;
+    margin: auto;
+    padding: 50px 100px;
+    background-color: rgb(154, 151, 220);
+}
+
+#nivelf1 {
+    position: absolute;
+    top: 420px;
+    left: 60px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(1, 114, 192);
+    border-radius: 100% 100% 0% 100%;
+}
+
+#nivelf2 {
+    position: relative;
+    top: 168px;
+    left: -124px;
+    height: 255px;
+    width: 504px;
+    border-radius: 50% / 0 0 100% 100%;
+    background: rgb(37, 43, 137);
+    transform: rotate(-90deg);
 }
 
 .ventanaAyuda-juego {
-    background: yellow;
-    width: 1000px;
-    height: 800px;
-    color: black;
-    font-family: fantasy;
-    font-size: 50px;
-    text-align: center;
-    padding: 30px;
-    min-height: 300px;
-    border-radius: 25%;
     position: absolute;
-    /*     left: 300px; */
-    top: 400px;
+    top: 0px;
+    background: white;
+    width: 340px;
+    height: 700px;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+#fondo-ventanaAyuda {
+    position: relative;
+    top: 255px;
+    left: -213px;
+    height: 226px;
+    width: 612px;
+    border-radius: 50% / 0 0 100% 100%;
+    background-color: rgb(157, 93, 216);
+    transform: rotate(-90deg);
+}
+
+#panel-ayuda {
+    position: relative;
+    top: 100px;
+    width: 310px;
+    height: 150px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+}
+
+.imagen-ayuda {
+    position: absolute;
+    top: 115px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+#imagenAyuda {
+    background-size: cover;
+    background-position: center;
 }
 
 #cerrar {
     position: relative;
-    float: inline-end;
+    top: 230px;
 }
 
 .instrucciones {
-    background: cornflowerblue;
-}
-
-#fondo-instrucciones {
-    position: relative;
-    top: 745px;
-    margin: auto;
-    border-left: 300px solid darkslateblue;
-    border-right: 700px solid transparent;
-    border-bottom: 500px solid darkslateblue;
-}
-
-#fondo-instrucciones2 {
-    position: relative;
-    top: 745px;
-    width: 1080px;
-    height: 852px;
-    background-color: darkslateblue;
-    margin: auto;
-}
-
-#panel-instrucciones {
-    position: relative;
-    top: -900px;
-    width: 1000px;
-    height: 1300px;
-    background-color: white;
+    background: rgb(133, 172, 231);
 }
 
 #h1-instrucciones {
     position: relative;
-    top: 200px;
-    font-size: 50px;
+    top: 80px;
+}
+
+#fondo-instrucciones {
+    position: relative;
+    top: 150px;
+    margin: auto;
+    border-left: 0px solid rgb(96, 106, 175);
+    border-right: 360px solid transparent;
+    border-bottom: 250px solid rgb(96, 106, 175);
+}
+
+#fondo-instrucciones2 {
+    position: relative;
+    top: 150px;
+    width: 360px;
+    height: 293px;
+    background-color: rgb(96, 106, 175);
+    margin: auto;
+}
+
+#panel-instrucciones {
+    position: absolute;
+    top: 192px;
+    width: 335px;
+    height: 409px;
+    background-color: white;
+    border-radius: 0% 10% 10% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#panelfondo-instrucciones {
+    position: absolute;
+    top: 127px;
+    left: 0px;
+    width: 149px;
+    height: 76px;
+    border-radius: 50%;
+    box-shadow: -14px 25px 0 white;
+    transform: rotate(-354deg);
 }
 
 #p-instrucciones {
     position: relative;
-    top: 100px;
-    font-size: 50px;
+    /* top: 100px; */
+    /* text-align: left; */
+    margin: 20px;
+    font-size: 1.2em;
+    line-height: 200%;
 }
 
 #jugar-instrucciones {
     position: relative;
-    top: -700px;
-    left: 400px;
-    font-size: 50px;
-    padding: 10px;
+    top: 85px;
+    left: 124px;
+    padding: .5em 1em;
+    border-radius: 5%;
     background-color: white;
+    color: black;
 }
 
 .creditos {
-    background: whitesmoke;
+    background: white;
 }
 
 #h1-creditos {
@@ -236,59 +418,70 @@ section {
     font-size: 50px;
 }
 
-#imagen-creditos {
-    position: relative;
-    top: -202px;
-    left: -141px;
-    width: 500px;
-    height: 500px;
-    background-color: black;
-    margin: auto;
-    border-radius: 100%;
-}
-
-#imagen-creditos2 {
-    position: relative;
-    top: 59px;
-    left: -141px;
-    width: 500px;
-    height: 500px;
-    background-color: black;
-    margin: auto;
-    border-radius: 100%;
-}
-
 #fondo-creditos {
     position: relative;
-    top: 745px;
-    left: -400px;
-    height: 600px;
-    width: 1400px;
+    top: 250px;
+    left: -150px;
+    height: 200px;
+    width: 500px;
     border-radius: 50% / 0 0 100% 100%;
     background-color: rgb(110, 1, 212);
     transform: rotate(-90deg);
 }
 
+.circulos-creditos {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+#imagen-creditos {
+    position: absolute;
+    top: 80px;
+    left: 290px;
+    background-image: url("../img/diseñadora.jpeg");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg);
+}
+
+#imagen-creditos2 {
+    position: absolute;
+    top: 80px;
+    left: 53px;
+    background-image: url("../img/ingeniero.jpeg");
+    background-size: cover;
+    background-position: center;
+    transform: rotate(90deg);
+}
+
 #Diseñadora-creditos {
-    font-size: 70px;
     position: relative;
-    top: -200px;
-    left: 300px;
+    top: 24px;
+    left: 143px;
+    font-weight: bold;
 }
 
 #Ingeniero-creditos {
-    font-size: 70px;
     position: relative;
-    top: -1140px;
-    left: 300px;
+    top: 280px;
+    left: 60px;
+    font-weight: bold;
 }
 
 .botonVolver {
-    background-color: Navy;
+    /*     background-color: Navy; */
     color: white;
-    padding: 50px;
+    padding: 15px;
     text-decoration: none;
     float: right;
+}
+
+.imagen-volver {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
 }
 
 .volver {

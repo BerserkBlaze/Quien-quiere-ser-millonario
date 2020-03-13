@@ -33,7 +33,17 @@ function mostrarNivel() {
         nivelActual.innerHTML = "Nivel 3";
         cambiarSeccion(6);
         setTimeout(volverAlJuego, tiempo_nivel);
+    } else if (contador == 100) {
+        nivelActual.innerHTML = "Has ganado el juego";
+        cambiarSeccion(6);
+        /*         setTimeout(volverAlJuego, tiempo_nivel);
+                terminarJuego(); */
     }
+    /* else {
+           nivelActual.innerHTML = "Siguiente nivel";
+           cambiarSeccion(6);
+           setTimeout(volverAlJuego, 1000);
+       } */
 }
 
 function volverAlJuego() {
@@ -198,12 +208,20 @@ function verificarAyudas(id) {
 
 function abrirAyudas(id) {
     ayuda = document.getElementById("panel-ayuda");
+    imagen = document.getElementById("imagenAyuda");
     if (id == "ayuda-solucion") {
+        /* ayuda.innerHTML = "Se mostrara la respuesta correcta"; */
+
+        imagen.style.backgroundImage = "url('./img/Grupo\ 167.png')";
         ayuda.innerHTML = "La solucion es: " + respuestas[r + 1];
     } else if (id == "ayuda-publico") {
+        imagen.style.backgroundImage = "url('./img/Grupo\ 168.png')";
         ayudaPublico();
+        /*         ayuda.innerHTML = "El publico elige la opcion que creen correcta"; */
+        imagen.style.backgroundImage = "url('./img/Grupo\ 166.png')";
     } else if (id == "ayuda-50") {
         ayuda50();
+        /* ayuda.innerHTML = "Se mostraran dos posibles respuestas"; */
     } else {
         ayuda.innerHTML = "No se puede utilizar esta ayuda";
     }
@@ -230,7 +248,7 @@ function ayudaPublico() {
         }
     }
     restante = 100 - suma;
-    ayuda.innerHTML = "<br>" + "El publico respondio:" + "<br>" +
+    ayuda.innerHTML = "El publico respondio:" + "<br>" +
         respuestas[r + 1] + " " + a + "%<br>" +
         respuestas[r + 2] + ": " + b + "%<br>" +
         respuestas[r + 3] + ": " + c + "%<br>" +
