@@ -211,15 +211,14 @@ function abrirAyudas(id) {
     imagen = document.getElementById("imagenAyuda");
     if (id == "ayuda-solucion") {
         /* ayuda.innerHTML = "Se mostrara la respuesta correcta"; */
-
         imagen.style.backgroundImage = "url('./img/Grupo\ 167.png')";
         ayuda.innerHTML = "La solucion es: " + respuestas[r + 1];
     } else if (id == "ayuda-publico") {
         imagen.style.backgroundImage = "url('./img/Grupo\ 168.png')";
         ayudaPublico();
         /*         ayuda.innerHTML = "El publico elige la opcion que creen correcta"; */
-        imagen.style.backgroundImage = "url('./img/Grupo\ 166.png')";
     } else if (id == "ayuda-50") {
+        imagen.style.backgroundImage = "url('./img/Grupo\ 166.png')";
         ayuda50();
         /* ayuda.innerHTML = "Se mostraran dos posibles respuestas"; */
     } else {
