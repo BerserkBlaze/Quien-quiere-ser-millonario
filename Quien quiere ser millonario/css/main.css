@@ -79,7 +79,7 @@ section {
 
 #h1-home {
     position: relative;
-    top: 80px;
+    top: 90px;
     text-align: center;
 }
 
@@ -97,6 +97,7 @@ section {
     background-color: white;
     border-radius: 5%;
     font-weight: bold;
+    width: 125px;
 }
 
 #instrucciones-home {
@@ -178,11 +179,11 @@ section {
 }
 
 .respuesta-juego {
-    margin: 2px;
-    width: 173px;
-    height: 80px;
+    margin: 1px;
+    width: 175px;
+    height: 74px;
     background: none;
-    border: none;
+    border: outset;
     color: black;
     text-align: center;
     font-weight: bold;
