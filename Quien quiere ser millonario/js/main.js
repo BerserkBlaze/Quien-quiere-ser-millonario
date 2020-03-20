@@ -1,8 +1,6 @@
 var secciones = [];
 var tiempo_splash = 2500;
-/* agregado */
 var tiempo_nivel = 1000;
-/* fin agregado */
 window.onload = function() {
     inicializarReferencias();
     setTimeout(cambiarSplash, tiempo_splash);
@@ -15,7 +13,6 @@ function inicializarReferencias() {
     secciones[3] = document.getElementById("seccion-juego");
     secciones[4] = document.getElementById("seccion-creditos");
     secciones[5] = document.getElementById("seccion-instrucciones");
-    /* agregado */
     secciones[6] = document.getElementById("seccion-nivel-juego");
 }
 
@@ -34,16 +31,10 @@ function mostrarNivel() {
         cambiarSeccion(6);
         setTimeout(volverAlJuego, tiempo_nivel);
     } else if (contador == 100) {
+        document.getElementById("salida-nivel").classList.remove("oculto")
         nivelActual.innerHTML = "Has ganado el juego";
         cambiarSeccion(6);
-        /*         setTimeout(volverAlJuego, tiempo_nivel);
-                terminarJuego(); */
     }
-    /* else {
-           nivelActual.innerHTML = "Siguiente nivel";
-           cambiarSeccion(6);
-           setTimeout(volverAlJuego, 1000);
-       } */
 }
 
 function volverAlJuego() {
@@ -53,8 +44,6 @@ function volverAlJuego() {
     }
 }
 
-
-/* fin agregado */
 function cambiarSplash() {
     secciones[1].className = "splash oculto";
     secciones[2].className = "home";
@@ -105,6 +94,7 @@ function inicializarJuego() {
     pregunta = document.getElementById("pregunta-juego");
     opciones = document.getElementById("respuesta-juego");
     botones = Array.from(document.querySelectorAll(".respuesta-juego"));
+    document.getElementById("contadorPremio").innerHTML = "0%";
     llenarRespuestas();
 }
 
@@ -192,35 +182,45 @@ function verificarRespuesta(id) {
 }
 
 function verificarAyudas(id) {
-    if (id == "ayuda-solucion" && countAyudaSolucion == 0) {
-        countAyudaSolucion++;
-        abrirAyudas(id);
-    } else if (id == "ayuda-publico" && countAyudaPublico == 0) {
-        countAyudaPublico++;
-        abrirAyudas(id);
-    } else if (id == "ayuda-50" && countAyuda50 == 0) {
-        countAyuda50++;
-        abrirAyudas(id);
-    } else {
-        abrirAyudas("");
+    imagen = document.getElementById("imagenAyuda");
+    if (id == "ayuda-solucion") {
+        imagen.style.backgroundImage = "url('./img/Grupo\ 167.png')";
+        if (countAyudaSolucion == 0) {
+            countAyudaSolucion++;
+            abrirAyudas(id);
+        } else {
+            abrirAyudas("");
+        }
+
+
+    } else if (id == "ayuda-publico") {
+        imagen.style.backgroundImage = "url('./img/Grupo\ 168.png')";
+        if (countAyudaPublico == 0) {
+            countAyudaPublico++;
+            abrirAyudas(id);
+        } else {
+            abrirAyudas("");
+        }
+
+    } else if (id == "ayuda-50") {
+        imagen.style.backgroundImage = "url('./img/50.png')";
+        if (countAyuda50 == 0) {
+            countAyuda50++;
+            abrirAyudas(id);
+        } else {
+            abrirAyudas("");
+        }
     }
 }
 
 function abrirAyudas(id) {
     ayuda = document.getElementById("panel-ayuda");
-    imagen = document.getElementById("imagenAyuda");
     if (id == "ayuda-solucion") {
-        /* ayuda.innerHTML = "Se mostrara la respuesta correcta"; */
-        imagen.style.backgroundImage = "url('./img/Grupo\ 167.png')";
         ayuda.innerHTML = "La solucion es: " + respuestas[r + 1];
     } else if (id == "ayuda-publico") {
-        imagen.style.backgroundImage = "url('./img/Grupo\ 168.png')";
         ayudaPublico();
-        /*         ayuda.innerHTML = "El publico elige la opcion que creen correcta"; */
     } else if (id == "ayuda-50") {
-        imagen.style.backgroundImage = "url('./img/Grupo\ 166.png')";
         ayuda50();
-        /* ayuda.innerHTML = "Se mostraran dos posibles respuestas"; */
     } else {
         ayuda.innerHTML = "No se puede utilizar esta ayuda";
     }

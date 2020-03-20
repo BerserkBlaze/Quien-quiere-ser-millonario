@@ -41,7 +41,7 @@
         <div id="fondo-juego2">
             <a id="ayuda-solucion" class="ayuda-juego" onclick="verificarAyudas('ayuda-solucion')"><img class="imagen-ayuda-juego" src="img/Grupo 167.png" alt="solucion"></a>
             <a id="ayuda-publico" class="ayuda-juego" onclick="verificarAyudas('ayuda-publico')"><img class="imagen-ayuda-juego" src="img/Grupo 168.png" alt="publico"></a>
-            <a id="ayuda-50" class="ayuda-juego" onclick="verificarAyudas('ayuda-50')"><img class="imagen-ayuda-juego" src="img/Grupo 166.png" alt="wifi"></a>
+            <a id="ayuda-50" class="ayuda-juego" onclick="verificarAyudas('ayuda-50')"><img class="imagen-ayuda-juego" src="img/50.png" alt="50%"></a>
         </div>
         <h1 id="h1-juego">PREGUNTA</h1>
         <div id="panelPreguntas-juego">
@@ -64,7 +64,7 @@
             <div id="imagen-creditos2" class="circulos-creditos"></div>
         </div>
         <div class="contenedor-creditos">
-            <span id="Diseñadora-creditos">Valentina Urrego Quiroz</span>
+            <span id="Designer-creditos">Valentina Urrego Quiroz</span>
         </div>
         <div class="contenedor-creditos">
             <span id="Ingeniero-creditos">Andruth Polo Buelvas</span>
@@ -86,6 +86,7 @@
         <a type="button" onclick="cambiarSeccion(3); mostrarNivel();" id="jugar-instrucciones">JUGAR</a>
     </section>
     <section id="seccion-nivel-juego" class="oculto">
+        <a id="salida-nivel" class="oculto" onclick="cambiarSeccion(2);inicializarJuego();" class="botonVolver"><img class="imagen-volver" src="img/Grupo 32.png" alt="volver"></a>
         <div id="nivelf1"></div>
         <div id="nivelf2"></div>
         <div id="contenedor-nivelActual">
@@ -97,7 +98,7 @@
         </div>
         <div id="panel-ayuda"></div>
         <div id="cerrar">
-            <a><img src="img/close.png" alt="cerrar" onclick="cerrarAyudas()"></a>
+            <a><img id="cerrarVentanaEmergente" src="img/close.png" alt="cerrar" onclick="cerrarAyudas()"></a>
         </div>
         <div id="imagenAyuda" class="imagen-ayuda">
             <!--             <a href="javascript:void();"></a> -->

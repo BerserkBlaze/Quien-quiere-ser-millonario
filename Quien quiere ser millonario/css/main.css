@@ -78,8 +78,9 @@ section {
 }
 
 #h1-home {
-    position: relative;
+    position: absolute;
     top: 90px;
+    left: 7px;
     text-align: center;
 }
 
@@ -98,6 +99,7 @@ section {
     border-radius: 5%;
     font-weight: bold;
     width: 125px;
+    cursor: pointer;
 }
 
 #instrucciones-home {
@@ -187,6 +189,7 @@ section {
     color: black;
     text-align: center;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .ayuda-juego {
@@ -202,6 +205,7 @@ section {
     width: 45px;
     height: 45px;
     border-radius: 100%;
+    cursor: pointer;
 }
 
 .imagen-solucion {
@@ -252,7 +256,7 @@ section {
     text-align: center;
     align-items: center;
     width: 360px;
-    height: 700px;
+    height: 720px;
 }
 
 #nivelActual {
@@ -285,6 +289,14 @@ section {
     transform: rotate(-90deg);
 }
 
+#salida-nivel {
+    z-index: 10;
+    position: absolute;
+    top: 0px;
+    left: 305px;
+    cursor: pointer;
+}
+
 .ventanaAyuda-juego {
     position: absolute;
     top: 0px;
@@ -307,6 +319,10 @@ section {
     transform: rotate(-90deg);
 }
 
+#cerrarVentanaEmergente {
+    cursor: pointer;
+}
+
 #panel-ayuda {
     position: relative;
     top: 100px;
@@ -325,7 +341,7 @@ section {
     left: 100px;
     width: 150px;
     height: 150px;
-    background-color: black;
+    background-color: white;
     border-radius: 100%;
 }
 
@@ -346,6 +362,7 @@ section {
 #h1-instrucciones {
     position: relative;
     top: 80px;
+    left: 20px;
 }
 
 #fondo-instrucciones {
@@ -406,6 +423,7 @@ section {
     border-radius: 5%;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .creditos {
@@ -468,7 +486,7 @@ section {
     height: 50px;
 }
 
-#Diseñadora-creditos {
+#Designer-creditos {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -488,6 +506,7 @@ section {
     padding: 15px;
     text-decoration: none;
     float: right;
+    cursor: pointer;
 }
 
 .imagen-volver {
