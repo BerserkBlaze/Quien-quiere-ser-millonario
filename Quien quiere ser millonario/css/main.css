@@ -80,8 +80,7 @@ section {
 #h1-home {
     position: absolute;
     top: 90px;
-    left: 7px;
-    text-align: center;
+    left: 25px;
 }
 
 #imagen-home {
@@ -141,6 +140,7 @@ section {
     position: relative;
     top: 85px;
     left: 20px;
+    width: 300px;
 }
 
 #panelPreguntas-juego {
@@ -362,6 +362,7 @@ section {
 #h1-instrucciones {
     position: relative;
     top: 80px;
+    width: 300px;
     left: 20px;
 }
 
